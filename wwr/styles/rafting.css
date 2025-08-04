@@ -164,6 +164,41 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+.contact-info, .team, .contact-form {
+    margin: 2rem auto;
+    max-width: 800px;
+    padding: 1rem;
+}
+
+.team {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+.team .employee img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-form button {
+    background-color: #0066cc;
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #004c99;
+}
 
 footer .socialmedia {
   display: flex;
