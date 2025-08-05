@@ -1,12 +1,11 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Nunito+Sans&display=swap');
+
 :root {
-  --primary-color: #184e77;
-  /* Deep Blue */
-  --secondary-color: #83c5be;
-  /* Light Teal */
-  --accent1-color: #003366;
-  /* Navy Blue */
-  --accent2-color: #f9f9f9;
-  /* Light Gray */
+  --primary-color: #184e77;        /* Deep Blue */
+  --secondary-color: #83c5be;      /* Light Teal */
+  --accent1-color: #003366;        /* Navy Blue */
+  --accent2-color: #f9f9f9;        /* Light Gray */
   --heading-font: "Lato", sans-serif;
   --body-font: "Nunito Sans", sans-serif;
 }
@@ -18,13 +17,15 @@
   box-sizing: border-box;
 }
 
+/* Base Styles */
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
   background-color: var(--accent2-color);
+  line-height: 1.6;
 }
 
-/* Layout */
+/* Page Layout */
 header,
 main,
 footer {
@@ -34,10 +35,19 @@ footer {
 }
 
 /* Typography */
-h1,
-h2 {
+h1, h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* NAVIGATION */
@@ -165,44 +175,6 @@ footer {
   margin-top: 2rem;
 }
 
-.contact-info,
-.team,
-.contact-form {
-  margin: 2rem auto;
-  max-width: 800px;
-  padding: 1rem;
-}
-
-.team {
-  display: flex;
-  gap: 1rem;
-  justify-content: space-around;
-}
-
-.team .employee img {
-  width: 150px;
-  border-radius: 50%;
-}
-
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.contact-form button {
-  background-color: #0066cc;
-  color: white;
-  padding: 0.7rem;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background-color: #004c99;
-}
-
 footer .socialmedia {
   display: flex;
   gap: 1rem;
@@ -211,4 +183,64 @@ footer .socialmedia {
 footer .socialmedia img {
   width: 30px;
   height: auto;
+}
+
+/* CONTACT PAGE SECTIONS */
+.contact-info,
+.team,
+.contact-form {
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 1rem;
+}
+
+/* TEAM SECTION */
+.team {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.team .employee img {
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* FORM STYLES */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: var(--body-font);
+}
+
+.contact-form textarea {
+  min-height: 100px;
+}
+
+.contact-form button {
+  background-color: #0066cc;
+  color: white;
+  padding: 0.7rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #004c99;
 }
